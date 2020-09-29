@@ -1,0 +1,62 @@
+.app-wrapper {
+    padding-top: 10px;
+    display: grid;
+    grid-template-areas: 
+    'h h'
+    'n c';
+
+    width: 1200px;
+    margin: 0 auto;
+
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 2fr 10fr;
+    grid-gap: 10px;
+}
+
+.header {
+    grid-area: h;
+    background-color: #60a0c5;
+}
+
+.header .app-logo {
+    width: 100px;
+}
+
+.nav {
+    grid-area: n;
+    background-color: #7dabc5;
+    
+}
+
+.navDivs {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.nav .navDivs div {
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.nav .navDivs div a {
+    text-decoration: none;
+    color: rgb(48, 32, 45);
+}
+
+.nav .navDivs div a:hover {
+    color: rgb(221, 143, 188);
+    background-color: #ffffff;
+}
+
+.content {
+    grid-area: c;
+    background-color: #84acc4bd;
+}
+
+.content .contImg {
+    width: 600px;
+    text-align: center;
+}
+
+
+
