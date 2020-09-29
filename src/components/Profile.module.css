@@ -1,0 +1,12 @@
+.content {
+    grid-area: c;
+    background-color: #93b5c9;
+}
+
+.contImg {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 600px;
+    text-align: center;
+}
