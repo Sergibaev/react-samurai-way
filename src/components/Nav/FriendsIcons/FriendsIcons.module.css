@@ -1,0 +1,9 @@
+.icons {
+    margin-top: 15px;
+}
+
+.icons img {
+    display: inline-block;
+    width: 50px;
+    padding-right: 5px;
+}

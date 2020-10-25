@@ -1,5 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
+import FriendsIcons from './FriendsIcons/FriendsIcons'
 import s from './Nav.module.css'
 
 export default function Nav() {
@@ -11,6 +12,10 @@ export default function Nav() {
                     <div className={s.item}><NavLink to='/news'>News</NavLink></div>
                     <div className={s.item}><NavLink to='/music'>Music</NavLink></div>                    
                     <div className={s.item}><NavLink to='/settings'>Settings</NavLink></div>
+                    <div className={s.item}>
+                        <NavLink to='/friends'>Friends</NavLink>
+                        <FriendsIcons />
+                    </div>
                 </div>        
             </nav>
        

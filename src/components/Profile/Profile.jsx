@@ -9,7 +9,9 @@ export default function Profile(props) {
     return (        
         <div>
             <ProfileInfo />
-            <MyPosts posts={props.posts} />
+            <MyPosts posts = {props.state.posts} 
+                    dispatch = {props.dispatch}
+                    newPostText={props.state.newPostText} />
         </div>       
     )
 }

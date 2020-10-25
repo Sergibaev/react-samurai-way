@@ -20,3 +20,13 @@
 .messages .message {
     padding: 5px;
 }
+
+.icon img {    
+    display: inline-block;
+    width: 50px;
+    margin-right: 10px;
+}
+
+.icon .link {
+    display: inline-block;
+}

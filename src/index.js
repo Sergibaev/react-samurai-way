@@ -2,30 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App';
+import store from './redux/store'
 
-let postsData = [
-  {id: '1', message:'What is this?', likesCount: 15,},
-  {id: '2', message:'U are dumn', likesCount: 47,},
-  {id: '3', message:'Would you break up?', likesCount: 5,},        
-]
+export const rerenderEntireTree = (state) => {
+    ReactDOM.render(
+    <React.StrictMode>
+      <App state={state} 
+            dispatch={store.dispatch.bind(store)} />
+    </React.StrictMode>,
+    document.getElementById('root')
+  );
+}
 
-let dialogsData = [
-  {id: '1', name:'Aidos'},
-  {id: '2', name:'Dimych'},
-  {id: '3', name:'Masha'},
-  {id: '4', name:'Pasha'},
-  {id: '5', name:'Sasha'},
-]
+rerenderEntireTree(store.getState())
 
-let messagesData = [
-  {id: '1', text:'Hay'},
-  {id: '2', text:'How are you?'},
-  {id: '3', text:'Would you break up?'},        
-]
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App dialogs={dialogsData} posts={postsData} msg={messagesData} />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+store.subscriber(rerenderEntireTree)

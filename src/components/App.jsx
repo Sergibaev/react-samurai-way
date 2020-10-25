@@ -8,20 +8,23 @@ import Profile from './Profile/Profile';
 import Music from './Music/Music'
 import News from './News/News'
 import Settings from './Settings/Settings'
-
+import Friends from './Friends/Friends';
 
 export default function App(props) {
+  
   return (
     <BrowserRouter>
       <div className={s.wrapper}> 
         <Header />     
         <Nav />
         <div className={s.content}>
-          <Route path='/profile' render={ () => <Profile posts={props.posts} /> } />
-          <Route path='/dialogs' render={ () => <Dialogs dialogs={props.dialogs} msg={props.msg} /> } />
+          <Route path='/profile' render={ () => <Profile state={props.state.profilePage} 
+                                                          dispatch={props.dispatch} /> } />
+          <Route path='/dialogs' render={ () => <Dialogs state={props.state.messagesPage} /> } />
           <Route path='/news' render={ () => <Music /> } />
           <Route path='/music' render={ () => <News /> } />
           <Route path='/settings' render={ () => <Settings /> } />
+          <Route path='/friends' render={ () => <Friends /> } />
         </div>           
       </div>
     </BrowserRouter>

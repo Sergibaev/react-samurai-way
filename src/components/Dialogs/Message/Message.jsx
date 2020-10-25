@@ -4,6 +4,8 @@ import s from './../Dialogs.module.css'
 
 export default function Message(props) {
     return (
-        <div className={s.message}>{props.text}</div>
+        <div>
+            <div className={s.message}>{props.icon}{props.text}</div>
+        </div>
     )
 }
